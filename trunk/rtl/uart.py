@@ -79,7 +79,9 @@ def UART(rx_data, rx_avail, rx_error, read_en,
                 tx_count16.next = (tx_count16 + 1) % 16
 
                 if tx_count16 == 0 and tx_is_busy:
-                    tx_bitcount.next = tx_bitcount - 1
+                    ### tx_bitcount.next = tx_bitcount - 1 ### local_mod: exception somehow
+                    if tx_bitcount > 0: ### local_mod: avoid exception
+                        tx_bitcount.next = tx_bitcount - 1 ### local_mod: conditional
 
                     if tx_bitcount == 0:
                         # transmit finished
@@ -240,7 +242,7 @@ def uart_test_top(txd_line, rxd_line, debug_txd_line, debug_rxd_line, leds, rese
     return instances()
 
 import sys
-from numpy import log2
+from local_numpy import log2
     
 if __name__ == '__main__':
     #rx_data = Signal(intbv(0)[8:])
