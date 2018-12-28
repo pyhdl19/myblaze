@@ -542,10 +542,15 @@ def TopBench():
             if debug_dmem_addr_out == 0xffffffc0:
                 #if debug_dmem_sel_out == 0b1000:
                 if debug_dmem_we_out:
-                    sys.stdout.write(chr(int(debug_dmem_data_out[8:])))
-                    sys.stdout.flush()
+                    ### sys.stdout.write(chr(int(debug_dmem_data_out[8:])))
+                    ### sys.stdout.flush()
+                    pass ### local_mod: replace the above two lines with two lines after this ...
                     #print int(debug_dmem_data_out[8:])
                     #print 'output: %d' % debug_dmem_data_out[8:]
+                if debug_dmem_we_out: ### local_mod: new logic, fix uart monitoring
+                    if debug_dmem_ena_in: # TODO: which one? ena, ena_in, ena_out?
+                        sys.stdout.write(chr(int(debug_dmem_data_out[8:])))
+                        sys.stdout.flush()
 
 
 
