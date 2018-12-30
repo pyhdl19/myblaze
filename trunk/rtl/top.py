@@ -302,6 +302,8 @@ def SysTop(txd_line, rxd_line, txd_line2, rxd_line2, leds, reset, clock,
 
             #if write_en and not tx_busy:
                 #led_reg.next = concat(led_reg[31:], led_reg[31])
+            if dmem_addr_out[28:] == 0xFFFFFA0 and dmem_ena_out: ### local_mod case: uart tx_busy at 0xffffffa0
+                dmem_data_in.next = concat(Signal(intbv(0x38003800)[31:]), tx_busy) # 0x7000700x
             if dmem_we_out and dmem_addr_out[28:] == 0xFFFFFB0:
                 led_reg.next = dmem_data_out
             else:

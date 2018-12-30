@@ -118,6 +118,8 @@ def BankedBRAM(
             bank_in[1].next = data_in[16:8]
             bank_in[2].next = data_in[24:16]
             bank_in[3].next = data_in[32:24]
+            if not enable: ### local_mod: do not drive data_out when not enabled.
+                return
             data_out.next = concat(bank_out[3], bank_out[2],
                                    bank_out[1], bank_out[0])
             
