@@ -20,7 +20,9 @@ from bram import *
 
 program = []
 
+local_mod_no_prepare = False
 def prepare():
+    if local_mod_no_prepare: return
     one = open('rom.vmem')
     banks = [open('rom%s.vmem'%i, 'w') for i in range(4)]
     try:
@@ -337,7 +339,7 @@ def SysTop(txd_line, rxd_line, txd_line2, rxd_line2, leds, reset, clock,
     return imem, dmem, core, uart, uart2, glue, run
 
 import sys
-from numpy import log2
+from local_mod_numpy import log2
 
 def TopBench():
     prepare()

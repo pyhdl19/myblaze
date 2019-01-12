@@ -14,7 +14,7 @@
 from myhdl import *
 from defines import *
 from functions import *
-from debug import *
+###from debug import * ### local_mod comment this out
 
 def BRAMInitial(ram, filename, clock):
     __verilog__ = """

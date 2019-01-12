@@ -240,7 +240,7 @@ def uart_test_top(txd_line, rxd_line, debug_txd_line, debug_rxd_line, leds, rese
     return instances()
 
 import sys
-from numpy import log2
+from local_mod_numpy import log2
     
 if __name__ == '__main__':
     #rx_data = Signal(intbv(0)[8:])
