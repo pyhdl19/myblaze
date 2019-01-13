@@ -1,0 +1,56 @@
+
+local_samples/notes-top_sample2_fast_uart
+
+
+Modifications to make it run better:
+
+
+make uart at the fastest avaiable speed:
+[1] rtl/top.py line 250 modified to set baud *27
+
+
+exception at _initbv.py line 79 : intbv value < minimum
+source line from uart.py line 82 tx_bitcount.next = tx_bitcount -1
+[2] rtl/uart.py  line 82 make the line conditional with a if statement
+
+
+run the exactly same sample as sample1. but make a local copy of program and data for convenience.
+redirect the output to a log file. the screen log look like:
+
+$ python top_sample2_fastuart.py 8192 > log-capture-screen
+top_sample2_fastuart.py:15: UserWarning:
+    traceSignals(): Deprecated usage: See http://dev.myhdl.org/meps/mep-114.html
+  tb = myhdl.traceSignals(top.TopBench)
+
+those warning appears after a long while just before the program finishes.
+
+inspecting the log file, the output now contains the repeated characters of "Hellow, world!",
+similar to something like, where "<...>" just means repeated same characters, when opened in vi:
+
+    0::::::::<...>:::::::HHHHHH<...>HHHHHHHeeeeee<...>eeeeelllllll<...>lllllllloooooo<...>oooooo
+    ,,,,,,<...>,,,,,,       <...>   wwwwwww<...>wwwwwwooooooo<...>oooooorrrrrrr<...>rrrrr
+    llllll<...>llllllddddddd<...>ddddd!!!!!!<...>!!!!!!^M^M^M^M^M<...>^M^M^M^
+
+
+exploring the waveform:
+
+[1] choose signals:
+        top.clock
+        top.reset
+        top.tx_busy
+        top.txd_line
+        top.uart.tx_bitcount[3:0]
+        top.txdata[31:0]
+        top.write_en
+    zoom to place the marker at the first write_en=1 pulse.
+    zoom to show a proper fiew of multiple uart words.
+
+a few things can be seen: 
+
+[1] the first uart character is 0x30 or '0'. the second is 0x3A or ':". the next ones are:
+        0x48=='H', 0x65=='e', 0x6C=='l', 0x6C=='l', 0x6F=='o', 0x2C==',', ...
+[2] the writing of 2nd char from processor started way before uart word is sent out.
+    the write cycle takes a long time until the first word is fully sent out.
+    in the period, the write_en keeps asserted high. on the falling edge of write_en the data is taken.
+
+
