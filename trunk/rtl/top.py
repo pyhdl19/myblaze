@@ -544,10 +544,18 @@ def TopBench():
             if debug_dmem_addr_out == 0xffffffc0:
                 #if debug_dmem_sel_out == 0b1000:
                 if debug_dmem_we_out:
-                    sys.stdout.write(chr(int(debug_dmem_data_out[8:])))
-                    sys.stdout.flush()
+                    ### sys.stdout.write(chr(int(debug_dmem_data_out[8:])))
+                    ### sys.stdout.flush()
+                    pass ### local_mod: replace the above two lines with the if clause below ...
                     #print int(debug_dmem_data_out[8:])
                     #print 'output: %d' % debug_dmem_data_out[8:]
+                    ### local_mod: add the if clause below
+                    ###            when a dmem target is busy the ena_in will not be asserted
+                    ###            thus effectively lengthen the dmem write cycle
+                    ###            till the target is ready and the ena_in is asserted
+                    if debug_dmem_ena_in:  # when ena_in is asserted the write data is taken
+                        sys.stdout.write(chr(int(debug_dmem_data_out[8:])))
+                        sys.stdout.flush()
 
 
 
