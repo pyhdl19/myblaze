@@ -1,0 +1,22 @@
+
+local_samples/notes-top_sample2_write_busy
+
+
+Modifications to make it run better:
+
+
+make uart char output to the simulation console not repeatedly duplicated:
+[1] rtl/top.py line 547 when dmem_addr_out is high it writes the char
+                        but it should only do when ena_in is asserted.
+
+
+simulation screen output:
+
+size=13
+    traceSignals(): Deprecated usage: See http://dev.myhdl.org/meps/mep-114.html
+  tb = myhdl.traceSignals(top.TopBench)
+0:Hello, world!0:Hello, world!
+
+now that the characters are printed each only once
+
+
