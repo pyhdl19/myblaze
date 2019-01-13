@@ -79,7 +79,8 @@ def UART(rx_data, rx_avail, rx_error, read_en,
                 tx_count16.next = (tx_count16 + 1) % 16
 
                 if tx_count16 == 0 and tx_is_busy:
-                    tx_bitcount.next = tx_bitcount - 1
+                    if tx_bitcount > 0:  ### local_mod: avoid exception
+                        tx_bitcount.next = tx_bitcount - 1 ### local_mod: conditional
 
                     if tx_bitcount == 0:
                         # transmit finished

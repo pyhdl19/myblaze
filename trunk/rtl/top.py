@@ -247,7 +247,7 @@ def SysTop(txd_line, rxd_line, txd_line2, rxd_line2, leds, reset, clock,
     uart = UART(rx_data, rx_avail, rx_error, read_en,
            tx_data, tx_busy, write_en,
            uart_rxd, uart_txd, reset, clock,
-           freq_hz=50000000, baud=115200)
+           freq_hz=50000000, baud=115200*27) ### local_mod: *27 to speed up uart tx
 
     uart2 = UART(rx_data2, rx_avail2, rx_error2, read_en2,
            tx_data2, tx_busy2, write_en2,
