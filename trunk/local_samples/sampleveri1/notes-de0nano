@@ -1,0 +1,29 @@
+
+compiled and synthesized for de0nano: 
+
+    quartus 16.1.0
+
+    le: 2245/22320 10%
+    reg:  1182
+    mem bits: 150528/608256 25%
+
+compare exclude this block: 
+
+    le: 802/22320 4%
+    reg: 607
+    mem bits: 16384/608256 3%
+
+new project:
+
+    Family : Cyclone IV E
+    Device : EP4CE22F17C6
+    Timing Models : Final
+    Total logic elements : 1,396 / 22,320 ( 6 % )
+        Total combinational functions : 1,310 / 22,320 ( 6 % )
+        Dedicated logic registers : 576 / 22,320 ( 3 % )
+    Total registers : 576
+    Total pins : 13 / 154 ( 8 % )
+    Total virtual pins : 0
+    Total memory bits : 134,144 / 608,256 ( 22 % )
+
+

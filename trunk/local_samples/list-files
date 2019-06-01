@@ -1,0 +1,52 @@
+
+list-files
+
+
+ls -lrt
+drwxrwxr-x+   0 Jan 12 19:13 sample1_rerun
+drwxrwxr-x+   0 Jan 18 18:41 sample2_fast_uart
+drwxrwxr-x+   0 Jan 21 21:07 sampleveri1
+-rw-rw-r--+   0 Jun  1 10:25 list-files
+
+
+$ ls -lrt sample1_rerun/
+    -rwxrwxr-x+   2892864 Jan 12 19:13 TopBench.vcd
+    -rwxrwxr-x+      7549 Jan 12 19:13 notes-top_sample1_rerun
+    -rwxrwxr-x+       381 Jan 12 19:13 top_sample1_rerun.py
+    -rw-rw-r--+      6144 Jan 12 19:13 rom3.vmem
+    -rw-rw-r--+      6144 Jan 12 19:13 rom2.vmem
+    -rw-rw-r--+      6144 Jan 12 19:13 rom1.vmem
+    -rw-rw-r--+      6144 Jan 12 19:13 rom0.vmem
+    -rwxrwxr-x+     70416 Jan 12 19:13 log-wave-capture-1-120us.png
+    -rwxrwxr-x+     75275 Jan 12 19:13 log-wave-capture-2-120us.png
+
+$ git status sample1_rerun/
+
+$ ls -lrt sample2_fast_uart/
+    -rwxrwxr-x+   5722403 Jan 12 17:37 TopBench-1-corefixes.vcd
+    -rwxrwxr-x+   5722403 Jan 12 19:13 TopBench.vcd
+    -rw-rw-r--+      4395 Jan 12 19:13 log-capture-screen
+    -rwxrwxr-x+      2130 Jan 12 19:13 notes-top_smple2_fast_uart
+    -rwxrwxr-x+     74630 Jan 12 19:13 log-wave-capture-1-uart27x.png
+    -rwxrwxr-x+       566 Jan 12 19:13 notes-top_sample2_write_busy
+    -rwxrwxr-x+      1533 Jan 12 19:13 notes-top_sample3_bram_output_fix
+    -rwxrwxr-x+       381 Jan 18 18:41 top_sample2_fastuart.py
+
+$ git status sample2_fast_uart/
+    On branch explore/samples
+    Untracked files:
+        sample2_fast_uart/TopBench-1-corefixes.vcd
+        sample2_fast_uart/top_sample2_fastuart.py
+
+$ diff sample1_rerun/top_sample1_rerun.py sample2_fast_uart/top_sample2_fastuart.py
+
+$ diff sample2_fast_uart/TopBench-1-corefixes.vcd sample2_fast_uart/TopBench.vcd
+
+
+$ ls -lrt sampleveri1/
+    -rwxrwxr-x+     785 Jan 19 13:38 top_sample_veri1.py
+    -rwxrwxr-x+   53832 Jan 19 13:38 SysTop.v
+    -rwxrwxr-x+     450 Jan 19 13:38 tb_SysTop.v
+    -rw-rw-r--+     629 Jan 19 23:17 notes-de0nano
+
+
