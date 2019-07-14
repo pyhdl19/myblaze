@@ -9,7 +9,7 @@
     :copyright: Copyright (c) 2010 Jian Luo
     :author-email: jian.luo.cn(at_)gmail.com
     :license: LGPL, see LICENSE for details
-    :revision: $Id$
+    :revision: $Id: emulator.py 6 2010-11-21 23:18:44Z rockee $
 """
 
 from random import randrange
