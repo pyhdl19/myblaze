@@ -1,0 +1,32 @@
+
+list-files-2
+
+
+ls -lrt
+
+-rw-rw-r--+       2632 Dec 21  2018 notes-links-crosstool-ng-fixes
+-rwxrwxr-x+     457304 Dec 22  2018 myblaze-toolchain-build.pdf
+drwxrwxr-x+          0 Dec 22  2018 log-build2-dkf4
+drwxrwxr-x+          0 Dec 22  2018 log-build1-dkf3
+-rw-rw-r--+        474 Dec 22  2018 notes-builds
+-rw-rw-r--+       1735 Dec 23  2018 notes-rebuild-again
+-rw-rw-r--+       3347 Dec 23  2018 notes-links
+-rw-rw-r--+      16116 Dec 23  2018 notes-rebuild-again-screenlog
+-rwxrwxr-x+    3315074 Dec 24  2018 xilinx-mb_ref_guide.pdf
+-rwxrwxr-x+    9385774 Dec 24  2018 xilinx-ug984-vivado-microblaze-ref.pdf
+-rw-rw-r--+        306 Dec 24  2018 xilinx-mb-docs
+drwxrwxr-x+          0 Dec 25  2018 log-build3-dkf5
+drwxrwxr-x+          0 Dec 25  2018 log-build4-dkf5-config-again
+-rw-rw-r--+       2628 Dec 25  2018 notes-redo-config
+-rw-rw-r--+       2108 Dec 25  2018 list-files
+-rw-rw-r--+       1588 Dec 25  2018 notes-sample1
+-rwxrwxr-x+     703536 Jan 18 22:28 design-thesis.pdf
+-rwxrwxr-x+      32821 Jan 19 10:14 design-vhdl2proc.pdf
+-rwxrwxr-x+     139305 Jan 19 10:15 design-pipeline-1250759293.jpg
+-rwxrwxr-x+       3558 Jan 19 10:17 design-opencores.txt
+-rwxrwxr-x+        796 Jan 19 10:29 design-github.txt
+-rwxrwxr-x+   14450169 Jan 19 21:27 de0nano-tidu737.pdf
+-rwxrwxr-x+     979774 Jan 19 22:27 de0nano-Using_the_SDRAM.pdf
+-rw-rw-r--+          0 Jul 14 16:54 list-files-2
+
+
