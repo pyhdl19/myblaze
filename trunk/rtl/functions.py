@@ -8,7 +8,7 @@
     :copyright: Copyright (c) 2010 Jian Luo
     :author-email: jian.luo.cn(at_)gmail.com
     :license: LGPL, see LICENSE for details
-    :revision: $Id$
+    :revision: $Id: functions.py 5 2010-11-21 10:59:30Z rockee $
 """
 
 from myhdl import *
