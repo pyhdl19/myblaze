@@ -1,0 +1,35 @@
+
+readme-branches
+
+
+syncsvn
+
+    the branch using git svn to clone from the opencore.org original svn repository. 
+
+
+localnotes
+
+    instructions to pulling the original svn code from opencore.org. 
+    notes about other branches.
+
+
+doc/reference
+
+    documentations as a reference
+
+
+explore/1812
+
+    exploration in december of 2018
+
+
+explore/core     explore/1901/core
+explore/samples  explore/1901/samples
+master           explore/1901/master
+
+    the january exploration in 2019. 
+    branched into .../1901/... branches before pulling in github.com latest master branch. 
+
+    the first column branches pulled in latest master from github.com, and merged into core and samples. 
+
+
