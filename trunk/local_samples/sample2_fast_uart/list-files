@@ -1,0 +1,17 @@
+
+list-files
+
+
+ls -lrt
+
+-rwxrwxr-x+   5722403 Jan 12  2019 TopBench.vcd
+-rw-rw-r--+      4395 Jan 12  2019 log-capture-screen
+-rwxrwxr-x+      2130 Jan 12  2019 notes-top_smple2_fast_uart
+-rwxrwxr-x+     74630 Jan 12  2019 log-wave-capture-1-uart27x.png
+-rwxrwxr-x+       566 Jan 12  2019 notes-top_sample2_write_busy
+-rwxrwxr-x+      1533 Jan 12  2019 notes-top_sample3_bram_output_fix
+-rwxrwxr-x+       381 Jan 18 18:41 top_sample2_fastuart.py  ----this file is the same as ../sample1... .py file
+-rw-rw-r--+         0 Jul 14 18:25 list-files
+
+
+
