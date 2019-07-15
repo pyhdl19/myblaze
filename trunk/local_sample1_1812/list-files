@@ -1,0 +1,24 @@
+
+list-files
+
+
+ls -lrt
+
+-rwxrwxr-x+       265 Dec 27  2018 top_sample11.py
+drwxrwxr-x+         0 Dec 28  2018 arc-c-sample-2-to-7
+drwxrwxr-x+         0 Dec 28  2018 arc-tool
+drwxrwxr-x+         0 Dec 28  2018 arc-sample-vmem-original
+drwxrwxr-x+         0 Dec 28  2018 arc-c-sample-1
+drwxrwxr-x+         0 Dec 28  2018 arc-c-sample-8
+-rw-rw-r--+     18432 Dec 28  2018 rom.vmem
+-rwxrwxr-x+      8192 Dec 28  2018 rom0.vmem
+-rwxrwxr-x+      8192 Dec 28  2018 rom1.vmem
+-rwxrwxr-x+      8192 Dec 28  2018 rom2.vmem
+-rwxrwxr-x+      8192 Dec 28  2018 rom3.vmem
+-rwxrwxr-x+   9334196 Dec 28  2018 wave9-saved.vcd  ----this file is exactly same as arc-c-sample-9/wave9-saved.vcd. remove.
+-rwxrwxr-x+   9334196 Dec 28  2018 TopBench.vcd     ----this file is exactly same as wave9-saved.vcd. remove.
+drwxrwxr-x+         0 Dec 29  2018 arc-diff
+drwxrwxr-x+         0 Jan 13 12:39 arc-c-sample-9
+-rw-rw-r--+         0 Jul 14 17:52 list-files
+
+
